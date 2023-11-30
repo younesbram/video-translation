@@ -39,6 +39,10 @@ Use `batch_process.sh` for dubbing same video to multiple languages.
 
 Feel free to contribute to the project by forking this repo and submitting pull requests.
 
+## Diagram
+![Mermaid Diagram of Program Logic](https://github.com/younesbram/video-translation/blob/main/for_valued_homie.png "Diagram")
+
+
 ## Links
 
 - NLLB: <https://github.com/facebookresearch/fairseq/tree/nllb>
@@ -49,6 +53,8 @@ Feel free to contribute to the project by forking this repo and submitting pull 
 - Wav2Lip: <https://github.com/Rudrabha/Wav2Lip>
 - Whisper: <https://platform.openai.com/docs/guides/speech-to-text>
 - GPT4: <https://openai.com/research/gpt-4>
+
+
 
 ## Alternatives
 Rask.ai
