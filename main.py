@@ -63,9 +63,20 @@ def extract_and_translate_audio(trimmed_video_file, target_language):
     return translated_audio_file
 
 def synthesize_voice_and_video(video_file, new_audio):
-    # Placeholder for synthesizing voice and video (lip-syncing/mixing)
-    # Add your code here for the actual processing
-    pass
+    checkpoint_path = 'Wav2Lip/checkpoints/wav2lip.pth'  # Replace with your actual path
+    result_video_path = video_file.replace('.mp4', '_lip_synced.mp4')  # Define result path
+
+    command = [
+        'python', 'Wav2Lip/inference.py',
+        '--checkpoint_path', checkpoint_path,
+        '--face', video_file,
+        '--audio', new_audio,
+        '--outfile', result_video_path
+    ]
+
+    subprocess.run(command, check=True)
+    return result_video_path
+
 
 def process_local_video(video_directory):
     if not os.path.exists(video_directory):
@@ -95,4 +106,4 @@ if __name__ == "__main__":
 
     trimmed_video_file = trim_video(video_file, args.start_time, args.end_time)
     translated_audio_array = extract_and_translate_audio(trimmed_video_file, args.target_language)
-    #synthesize_voice_and_video(trimmed_video_file, translated_audio_array)
+    synthesize_voice_and_video(trimmed_video_file, translated_audio_array)
