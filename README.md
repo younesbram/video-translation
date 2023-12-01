@@ -31,6 +31,9 @@ Hooray to open source.
 
 1. Clone the repository.
 2. Install required dependencies.
+```
+!pip install --quiet git+https://github.com/huggingface/transformers sentencepiece
+```
 3. Run `video_processor.py` with the video file and target language as input.
 
 ## Batch Processing
