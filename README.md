@@ -13,6 +13,8 @@ Hooray to open source.
 - Extract audio from video using `ffmpeg`.
 - Transcribe audio to text with `whisper` . *Currently on V3, up to 53 languages transcribable!
 - Translate text to target language using GPT-4. *Currently on GPT4, up to 95+ natural languages with complex semantic understanding. Might move to a fine-tuned LLM or [NLLB/SeamlessM4T](#links) from Meta AI for 200+ languages.
+
+- Note: Currently, using seamless for the voice synthesizing + translation all in one. Nov 30, 2023.
   
 - Use ElevenLabs API / TorToiSe for voice synthesis.
 - Lip-sync the voice-cloned translated audio using Wav2Lip.
